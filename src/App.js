@@ -7,16 +7,25 @@ import About from "./components/About";
 import NavScrollExample from "./components/Navbars";
 import User from "./components/User";
 import Pagenotfound from "./components/Pagenotfound";
+import Nav from "./components/Nav";
+import Company from "./components/Company";
+import Channel from "./components/Channel";
+import Other from "./components/Other";
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        <NavScrollExample />
+        {/* <NavScrollExample /> */}
+        <Nav />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route path="/contact" element={<Contact />}>
+            <Route path="company" element={<Company />} />
+            <Route path="channel" element={<Channel />} />
+            <Route path="other" element={<Other />} />
+          </Route>
           <Route path="/user/:name" element={<User />} />
           <Route path="/*" element={<Pagenotfound />} />
         </Routes>
