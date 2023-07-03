@@ -4,13 +4,14 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./components/Home";
 import Contact from "./components/Contact";
 import About from "./components/About";
-import NavScrollExample from "./components/Navbars";
+// import NavScrollExample from "./components/Navbars";
 import User from "./components/User";
 import Pagenotfound from "./components/Pagenotfound";
 import Nav from "./components/Nav";
 import Company from "./components/Company";
 import Channel from "./components/Channel";
 import Other from "./components/Other";
+import Login from "./components/Login";
 
 function App() {
   return (
@@ -19,7 +20,9 @@ function App() {
         {/* <NavScrollExample /> */}
         <Nav />
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Login />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/login" element={<Login />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />}>
             <Route path="company" element={<Company />} />

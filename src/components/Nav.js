@@ -7,10 +7,15 @@ function Nav(props) {
       <ul className="navbarr">
         <li>
           <NavLink
-            to="/"
+            to="/home"
             className="nav-bar-link"
             style={({ isActive }) => {
-              return { backgroundColor: isActive ? "black" : "white" };
+              return {
+                backgroundColor: isActive ? "lightpink" : "lightgray",
+                padding: "6px",
+                color: "black",
+                borderRadius: "8px",
+              };
             }}
           >
             Home
@@ -21,7 +26,12 @@ function Nav(props) {
             to="/about"
             className="nav-bar-link"
             style={({ isActive }) => {
-              return { backgroundColor: isActive ? "black" : "white" };
+              return {
+                backgroundColor: isActive ? "lightpink" : "lightgray",
+                padding: "6px",
+                color: "black",
+                borderRadius: "8px",
+              };
             }}
           >
             About
@@ -32,21 +42,47 @@ function Nav(props) {
             to="/contact"
             className="nav-bar-link"
             style={({ isActive }) => {
-              return { backgroundColor: isActive ? "black" : "white" };
+              return {
+                backgroundColor: isActive ? "lightpink" : "lightgray",
+                padding: "6px",
+                color: "black",
+                borderRadius: "8px",
+              };
             }}
           >
             Contact
           </NavLink>
-        </li>{" "}
+        </li>
         <li>
           <NavLink
             to="/user/test"
             className="nav-bar-link"
             style={({ isActive }) => {
-              return { backgroundColor: isActive ? "black" : "white" };
+              return {
+                backgroundColor: isActive ? "lightpink" : "lightgray",
+                padding: "6px",
+                color: "black",
+                borderRadius: "8px",
+              };
             }}
           >
             User
+          </NavLink>
+        </li>{" "}
+        <li>
+          <NavLink
+            to="/login"
+            className="nav-bar-link"
+            style={({ isActive }) => {
+              return {
+                backgroundColor: isActive ? "lightpink" : "lightgray",
+                padding: "8px",
+                color: "black",
+                borderRadius: "8px",
+              };
+            }}
+          >
+            Login
           </NavLink>
         </li>
       </ul>
