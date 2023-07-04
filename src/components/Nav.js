@@ -8,14 +8,8 @@ function Nav(props) {
         <li>
           <NavLink
             to="/home"
-            className="nav-bar-link"
-            style={({ isActive }) => {
-              return {
-                backgroundColor: isActive ? "lightpink" : "lightgray",
-                padding: "6px",
-                color: "black",
-                borderRadius: "8px",
-              };
+            className={({ isActive }) => {
+              return isActive ? "btn btn-primary" : "btn btn-outline-primary";
             }}
           >
             Home
@@ -24,14 +18,8 @@ function Nav(props) {
         <li>
           <NavLink
             to="/about"
-            className="nav-bar-link"
-            style={({ isActive }) => {
-              return {
-                backgroundColor: isActive ? "lightpink" : "lightgray",
-                padding: "6px",
-                color: "black",
-                borderRadius: "8px",
-              };
+            className={({ isActive }) => {
+              return isActive ? "btn btn-primary" : "btn btn-outline-primary";
             }}
           >
             About
@@ -40,14 +28,8 @@ function Nav(props) {
         <li>
           <NavLink
             to="/contact"
-            className="nav-bar-link"
-            style={({ isActive }) => {
-              return {
-                backgroundColor: isActive ? "lightpink" : "lightgray",
-                padding: "6px",
-                color: "black",
-                borderRadius: "8px",
-              };
+            className={({ isActive }) => {
+              return isActive ? "btn btn-primary" : "btn btn-outline-primary";
             }}
           >
             Contact
@@ -56,14 +38,8 @@ function Nav(props) {
         <li>
           <NavLink
             to="/user/test"
-            className="nav-bar-link"
-            style={({ isActive }) => {
-              return {
-                backgroundColor: isActive ? "lightpink" : "lightgray",
-                padding: "6px",
-                color: "black",
-                borderRadius: "8px",
-              };
+            className={({ isActive }) => {
+              return isActive ? "btn btn-primary" : "btn btn-outline-primary";
             }}
           >
             User
@@ -72,14 +48,8 @@ function Nav(props) {
         <li>
           <NavLink
             to="/login"
-            className="nav-bar-link"
-            style={({ isActive }) => {
-              return {
-                backgroundColor: isActive ? "lightpink" : "lightgray",
-                padding: "8px",
-                color: "black",
-                borderRadius: "8px",
-              };
+            className={({ isActive }) => {
+              return isActive ? "btn btn-primary" : "btn btn-outline-primary";
             }}
           >
             Login
