@@ -12,6 +12,7 @@ import Company from "./components/Company";
 import Channel from "./components/Channel";
 import Other from "./components/Other";
 import Login from "./components/Login";
+import Protected from "./components/Protected";
 
 function App() {
   return (
@@ -20,10 +21,10 @@ function App() {
         {/* <NavScrollExample /> */}
         <Nav />
         <Routes>
-          <Route path="/" element={<Login />} />
-          <Route path="/home" element={<Home />} />
+          <Route path="/" element={<Protected Component={Home} />} />
+          {/* <Route path="/home" element={<Home />} /> */}
           <Route path="/login" element={<Login />} />
-          <Route path="/about" element={<About />} />
+          <Route path="/about" element={<Protected Component={About} />} />
           <Route path="/contact" element={<Contact />}>
             <Route path="company" element={<Company />} />
             <Route path="channel" element={<Channel />} />

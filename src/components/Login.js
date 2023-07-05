@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 function Login(props) {
@@ -8,10 +8,6 @@ function Login(props) {
   // const [login, setLogin] = useState(false);
 
   const navigate = useNavigate();
-
-  let navToPage = (url) => {
-    navigate(url);
-  };
 
   function loginHandler(e) {
     e.preventDefault();
@@ -23,14 +19,23 @@ function Login(props) {
     } else {
       setChecknull(false);
       if (user === "prksh" && password === "prksh") {
-        navToPage("/home");
+        navigate("/");
+        localStorage.setItem("login", true);
       } else {
         if (user !== "" || password !== "") {
           alert("Wrong username or password");
+          console.log("Wrong username or password");
         }
       }
     }
   }
+
+  useEffect(() => {
+    let login = localStorage.getItem("login");
+    if (login) {
+      navigate("/");
+    }
+  });
 
   return (
     <>

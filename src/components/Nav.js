@@ -7,7 +7,7 @@ function Nav(props) {
       <ul className="navbarr">
         <li>
           <NavLink
-            to="/home"
+            to="/"
             className={({ isActive }) => {
               return isActive ? "btn btn-primary" : "btn btn-outline-primary";
             }}
